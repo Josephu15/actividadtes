@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Tienda Online Registro</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        function selHobbie()
+        {
+            var dibujar   = ["Saco","Sueter","Gorra"];
+            var cantar  = ["Olla","Jarilla","Plato"];
+            var bailar = ["Aretes","Pulsera","Anillo"];
+
+            if(document.getElementById("region").selectedIndex ==1)
+            {
+                borraelementos();
+                for(var i=0; i<dibujar.length; i++)
+                {
+                    provincia.options[provincia.options.length] =new Option(dibujar[i],i);
+                }
+            }
+
+            if(document.getElementById("region").selectedIndex ==2)
+            {
+                borraelementos();
+                for(var i=0; i<cantar.length; i++)
+                {
+                    provincia.options[provincia.options.length] =new Option(cantar[i],i);
+                }
+            }
+
+            if(document.getElementById("region").selectedIndex ==3)
+            {
+                borraelementos();
+                for(var i=0; i<bailar.length; i++)
+                {
+                    provincia.options[provincia.options.length] =new Option(bailar[i],i);
+                }
+            }
+
+        }
+
+        function borraelementos()
+        {
+            var sel = document.getElementById("provincia");
+            while(sel.length>1)
+            {
+                sel.remove(1);
+            }
+        }
+
+        window.onload=function(){alert('Aqui encontraras el formulario para la compra respectiva del producto que elijas');}
+    </script>
+    <style>
+        button, input, select, label, text{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+form{
+    border: 1px solid rgb(2, 11, 14);
+    position: relative;
+    width: 740px;
+    height: 790px;
+    margin: 0 auto;
+    padding: 1em;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    background: rgb(208, 237, 250);
+
+    display:grid;
+    grid-gap:15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1em 1em 1em 1em;
+}
+        :invalid::after{
+    content:" * revisar";
+    color:  rgb(235, 67, 67);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(235, 67, 67);
+}
+
+:valid{
+    content: "ok";
+}
+
+#main_title h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 50px;
+}
+
+#h2{
+    text-align:center;
+    font-size: 35px;
+    color: rgb(13, 48, 122);
+    
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a class="corrector">
+        <div id="main_title">
+            <h1>--Registro--</h1>
+            <h2 id="h2"><u>LLena el formulario con tus datos</u></h2>
+        </div>
+    <form>
+           <label for="nombres"> Nombres:</label> <input name="nombres" type="text" placeholder="Nombres completos" pattern="[A-Za-z\s]{5,}">
+
+           <label for="apellidos">Apellidos:</label> <input name="apellidos" type="text" placeholder="Apellidos completos" pattern="[A-Za-z\s]{5,}">
+
+           <label for="pais">Pais:</label> <input name="pais" type="text" placeholder="Indique su pais" pattern="[A-Za-z\s]{5,}">
+
+           <label for="Ciudad">Ciudad:</label> <input name="Ciudad" type="text" placeholder="Indique su Ciudad" pattern="[A-Za-z\s]{3,}">
+
+           <label for="direccion">Direccion domiciliaria:</label> <input name="direccion" type="text" placeholder="Escriba su direccion">
+           
+           <label for="telefono">Telefono:</label><input name="telefono"  type="text" placeholder="0000000000" pattern="[0-9]{10}">
+
+           <label for="regionuno">Tarjeta:</label>
+           <select name="regionuno" id="regionuno" onchange="selTarjeta();">
+               <option value="--">Tipo de tarjeta</option>
+               <option value="debito">Debito</option>
+               <option value="credito">Credito</option>
+        </select>
+        <label for="numero">Numero de la tarjeta:</label><input name="numero"  type="password" placeholder="0000000000" pattern="[0-9]{10}">
+        <label for="expiracion">Numero de expiracion:</label><input name="expiracion"  type="password" placeholder="0000" pattern="[0-9 / 0-9]{5}">
+        <label for="cc">CC/VV:</label><input name="cc"  type="password" placeholder="000" pattern="[0-9]{3}">
+           
+           <label for="e-mail">E-mail:</label><input name="e-mail"  type="text" placeholder="correo electronico" pattern="[A-Za-z @ A-Za-z . A-Za-z]{8,}">
+           <label for="region">Talla (Solo si es ropa agregue la talla):</label>
+           <select>
+               <option value="--">-Seleccione la talla-</option>
+               <option>XS</option>
+               <option>S</option>
+               <option>M</option>
+               <option>L</option>
+               <option>XL</option>
+        </select>
+           
+           <label for="region">Producto elegido:</label>
+           <select name="region" id="region" onchange="selHobbie();">
+               <option value="--">-Seleccione un producto-</option>
+               <option value="dibujar">Ropa</option>
+               <option value="cantar">Ceramica</option>
+               <option value="bailar">Accesorios</option>
+        </select>
+        
+
+        <label for="provincia">Tipo: </label>
+            <select name="provincia" id="provincia">
+                <option value="--">-Seleccione lo que desea-</option>
+            </select>
+        <div="errores"></div>
+<br>
+<br>
+        <li class="check">
+            <label>
+            <input type='checkbox' value='SI' id='acepto'/>
+            He leído y acepto las condiciones;
+            </label>
+            </li>
+            <br>
+            <button>Enviar registro</button>
+            </form>
+            <div class="py-5 text-right"><a href="productos.html" class="btn btn-dark px-5 py-3 text-uppercase">Regresar</a></div>
+        </div>
+      </div>
+    </form>
+</body>
+</html>
