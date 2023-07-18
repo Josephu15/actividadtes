@@ -1,7 +1,26 @@
+.logo-img {
+  width: 90px;
+  height: auto;
+  margin-right: 10px; 
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:first-child {
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-link:first-child svg {
+  margin-right: 5px; 
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
+  margin: -2px;
+  padding: -9px;
 }
 
 h1 {
@@ -10,7 +29,7 @@ h1 {
 
 form {
   max-width: 400px;
-  margin: 20px auto;
+  margin: 9px auto;
 }
 
 label {
@@ -18,7 +37,8 @@ label {
   margin-bottom: 10px;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 5px;
   margin-bottom: 10px;
@@ -40,19 +60,6 @@ button:hover {
   background-color: #45a049;
 }
 
-.success-message {
-  color: green;
+#response-message {
   margin-top: 10px;
-}
-
-.error-message {
-  color: red;
-  margin-top: 10px;
-}
-.logo-img {
-  width: 150px;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
