@@ -1,0 +1,26 @@
+/* Jhon Matute -> Jangojs */
+/* Hice el archivo de .gitignore para que no 
+hubiera errores con la rama de main
+y quede a cargo de los css estuve actualizando 
+los demas archivos para vincular lo respectivos
+estilos...*/
+
+/* Alejandra Capuz -> AlejandraCLV */
+/* Hice los html de productos y formulario,
+ademas de agregar las respectivas fotos.
+Incluyendo boostrap, jquery, javascript y 
+en ambos archivos...*/
+
+/* Xiomara Guapacha -> Xiomig2 */
+/* Hice  el archivo contacto.html y añadi script para la interactividad de formulario de contactos */
+
+
+/*Katherine Yagual -> DayanaYagual */
+/*Hice el archivo de acerca.html, agrege imagenes, boostrap*/
+
+/*Jose Ubillus -> JosephU15 */
+/*Cree el archivo en git bash, añadi a cada uno de mis compañeros, realice el header con boostrap,
+ ademas el popup de registro y la pagina de iniciar sesion*/
+
+ /*Leslie Mariana Saenz de Viteri Tapia - leslieDT */
+ /*Hice el codigo de inicio en html y css/*
