@@ -21,3 +21,6 @@ en ambos archivos...*/
 /*Jose Ubillus -> JosephU15 */
 /*Cree el archivo en git bash, añadi a cada uno de mis compañeros, realice el header con boostrap,
  ademas el popup de registro y la pagina de iniciar sesion*/
+
+ /*Leslie Mariana Saenz de Viteri Tapia - leslieDT */
+ /*Hice el codigo de inicio en html y css/*
