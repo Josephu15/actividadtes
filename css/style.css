@@ -1,6 +1,7 @@
 .logo-img {
-    width: 150px;
+    width: 90px;
     height: auto;
+
 }
 
 body {
@@ -67,3 +68,18 @@ body {
     background: #00ffff;
     clip-path: circle(600px at right 800px);
 }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link:first-child {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .nav-link:first-child svg {
+    margin-right: 5px; 
+  }
+  
